@@ -29,7 +29,7 @@ local function updateCalcViews(finalPos, finalVel)
 		addAngle = addAngle * 0.9
 		angle.r = angle.r * addAngle
 
-		-- position ping compensation -- using real velocity for getting the actual feeling of the player position rather than guessing
+		-- position ping compensation
 		if freezePly and ply:Ping() > 5 then
 			finalPos = finalPos + finalVel * FrameTime()
             SeamlessPortals.DrawPlayerInView = true
